@@ -2,4 +2,4 @@ env
 .coverage
 htmlcov
 .vscode
-projectfacilito/book/__pycache__
+/**/__pycache__
