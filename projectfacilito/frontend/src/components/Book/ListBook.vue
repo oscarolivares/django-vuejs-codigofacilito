@@ -2,13 +2,13 @@
   <div class="container">
     <div class="row">
       <div class="col text-left">
-        <h2>Listado de libros</h2>
-        <b-button size="sm" :to="{name: 'NewBook'}" variant="primary">
+        <h2 class="d-inline-block">Listado de libros</h2>
+        <b-button class="ml-2 mb-2" size="sm" :to="{name: 'NewBook'}" variant="info">
           Nuevo libro
         </b-button>
 
         <div class="col-md-12">
-          <b-table striped hover :items="books" :fields="fields">
+          <b-table class="table" striped hover :items="books" :fields="fields">
             <template slot="action" slot-scope="data" >
                <b-button size="sm" variant="primary" :to="{ name: 'EditBook', params: {bookId: data.item.id} }">
                 Editar
@@ -58,4 +58,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
+  .table{
+    margin-top: 1rem;
+  }
 </style>

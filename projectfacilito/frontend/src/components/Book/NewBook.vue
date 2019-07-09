@@ -9,12 +9,12 @@
       <div class="col">
         <div class="card">
           <div class="card-body">
-            
+
             <form @submit="onSubmit">
               <div class="form-group row">
                 <label for="title" class="col-sm-3 col-md-2 col-form-label">Título</label>
                 <div class="col-sm-7 col-md-6">
-                  <input type="text" name="title" placeholder="Título" class="form-control" v-model.trim="form.title" autofocus="true">
+                  <input type="text" name="title" placeholder="Título" class="form-control" v-model.trim="form.title" ref="title">
                 </div>
               </div>
               <div class="form-group row">
@@ -72,6 +72,9 @@ export default {
     }
   },
   created() {
+  },
+  mounted () {
+    this.$refs.title.focus()
   }
 }
 </script>
