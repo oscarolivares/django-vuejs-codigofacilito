@@ -43,4 +43,4 @@ export default new Router({
   ]
 })
 
-export const APIPath = 'http://127.0.0.1:8000/api/v1.0/books/'
+export const APIPath = 'http://192.168.0.114:8000/api/v1.0/books/'

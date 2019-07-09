@@ -42,6 +42,7 @@
 <script>
 import axios from 'axios'
 import swal from 'sweetalert'
+import {APIPath} from '@/router/index.js'
 
 export default {
   data() {
@@ -56,7 +57,7 @@ export default {
     onSubmit(e) {
       e.preventDefault()
 
-      const path = 'http://127.0.0.1:8000/api/v1.0/books/'
+      const path = APIPath
 
       axios.post(path, this.form)
         .then((response) => {

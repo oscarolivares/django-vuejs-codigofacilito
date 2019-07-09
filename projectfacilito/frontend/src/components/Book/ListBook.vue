@@ -26,6 +26,7 @@
 
 <script>
 import axios from 'axios'
+import {APIPath} from '@/router/index.js'
 
 export default {
   data() {
@@ -40,7 +41,7 @@ export default {
   },
   methods: {
     getBooks() {
-      const path = 'http://127.0.0.1:8000/api/v1.0/books/'
+      const path = APIPath
 
       axios.get(path)
         .then((response) => {
